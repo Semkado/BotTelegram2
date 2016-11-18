@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BotTelegram
@@ -16,7 +13,10 @@ namespace BotTelegram
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            using (var mainForm = new MainForm())
+            {
+                Application.Run(mainForm);
+            }
         }
     }
 }
